@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header.js';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Series from './pages/Series/Series.js';
+import Movies from './pages/Movies/Movies.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    /*react fragment so the Header will stay out of the component */
+    <Router>
+      <Header />
+      <div className="app">
+        <Switch>
+          {/* exact so the / doesn't overlap the others routes */}
+          <Route path="/" component={Series} exact />
+          <Route path="/movies" component={Movies}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
