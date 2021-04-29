@@ -11,6 +11,9 @@
     font-family: "Montserrat", sans-serif;
     height:80vh;
   }
+  .single-item img{
+    border-radius:10px;
+  }
 
 .description{
 
