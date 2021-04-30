@@ -10,7 +10,7 @@ const darkTheme = createMuiTheme({
   },
 });
 
-export default function CustomPagination({ setPage, numOfPages = 10 }) {
+export default function CustomPagination({ setPage, numberOfPages = 10 }) {
   // Scroll to top when page changes
   const handlePageChange = (page) => {
     setPage(page);
@@ -22,7 +22,7 @@ export default function CustomPagination({ setPage, numOfPages = 10 }) {
       <ThemeProvider theme={darkTheme}>
         <Pagination
           onChange={(e) => handlePageChange(e.target.textContent)}
-          count={numOfPages}
+          count={numberOfPages}
           color="primary"
 
         />
@@ -30,3 +30,5 @@ export default function CustomPagination({ setPage, numOfPages = 10 }) {
     </div>
   );
 }
+
+

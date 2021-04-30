@@ -32,9 +32,14 @@ const Header = () => {
           </Link>
           <Link to="/movies">
             <li>TV MOVIES</li>
-          </Link>
+            </Link>
+            <Link to="/search">
+            <li>SEARCH</li>
+            </Link>
+            
           </div>
         </ul>
+        
       </div>
 
       <div className="mobile-menu" onClick={handleClick}>

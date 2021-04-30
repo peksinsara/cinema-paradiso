@@ -10,14 +10,21 @@ const SingleItem = ({
     date,
     name,
     popularity,
-    vote_average
+    vote_average,
+    media_type
+    
 }) => {
     return (
         <div className="single-item">
+            <div className="vote-average">
+                <h2>{vote_average}</h2>
+            </div>
             <img src={poster ? `${img_300}/${poster}` : unavailable} alt="{name}" />
             <h2 className="series-name">{name}</h2>
             <span maxLength={11} className="description">{description}</span>
             <h2 className="popularity">{popularity}</h2>
+            <h2 className="media_type">{media_type}</h2>
+            
 
         </div>
     )

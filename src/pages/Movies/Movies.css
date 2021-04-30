@@ -1,0 +1,17 @@
+.movie{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+.pageTitle{
+
+    display:flex;
+    justify-content:center;
+    font-size:6vW;
+}
+
+@media (max-width:100px){
+    .pageTitle{
+        font-size:6vW;
+    }
+}

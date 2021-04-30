@@ -3,6 +3,7 @@ import Header from './components/Header.js';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Series from './pages/Series/Series.js';
 import Movies from './pages/Movies/Movies.js';
+import Search from './pages/SearchBar/SearchBar.js';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           {/* exact so the / doesn't overlap the others routes */}
           <Route path="/" component={Series} exact />
           <Route path="/movies" component={Movies}/>
+          <Route path="/search" component={Search}/>
         </Switch>
       </div>
     </Router>

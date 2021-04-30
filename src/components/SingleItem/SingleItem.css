@@ -9,16 +9,23 @@
     border-radius: 10px;
     position: relative;
     font-family: "Montserrat", sans-serif;
-    height:80vh;
+    height:100vh;
   }
   .single-item img{
     border-radius:10px;
   }
+  .vote-average{
+    background-color:rgba(54, 179, 218, 0.912);
+    border-radius: 10px;
+    width:80px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+  }
 
 .description{
-
     white-space: wrap;
-    overflow: hidden;
+  overflow: hidden;
     text-overflow: ellipsis;
     max-width: 200ch;
 }

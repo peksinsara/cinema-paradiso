@@ -1,0 +1,13 @@
+.custom-button{
+    background:rgb(58, 106, 130);
+    margin-top:5%;
+    border:none;
+    color:white;
+    border-radius:0px 10px 10px 0px;
+}
+.tabs{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-content: center;
+}
