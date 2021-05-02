@@ -4,13 +4,13 @@ import {
   TextField,
   Tabs,
   Tab,
-} from "@material-ui/core";
-import React, { useState, useEffect } from "react";
-import "./SearchBar.css";
-import axios from "axios";
-import Button from "../../components/Button/Button";
-import Pagination from "../../components/Pagination/Pagination";
-import SingleItem from "../../components/SingleItem/SingleItem";
+} from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import './SearchBar.css';
+import axios from 'axios';
+import Button from '../../components/Button/Button';
+import Pagination from '../../components/Pagination/Pagination';
+import SingleItem from '../../components/SingleItem/SingleItem';
 
 const Search = () => {
   const API_KEY = "e60e2f0cc6c14c63cb04b450da94ebfd";
@@ -33,15 +33,18 @@ const Search = () => {
 
   /*calling API*/
   const fetchSearch = async () => {
-
-    const { data } = await axios.get(
-      `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${searchText}&page=${page}&include_adult=false&media_type=${type ? "tv" : "movie"}`
-    );
-
-    console.log(data);
-
-    setContent(data.results);
-    setNumOfPages(data.total_pages);
+    try {
+      const { data } = await axios.get(
+        `https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=${
+          API_KEY
+        }&language=en-US&query=${searchText}&page=${page}&include_adult=false`
+      );
+      setContent(data.results);
+      setNumOfPages(data.total_pages);
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
@@ -49,9 +52,8 @@ const Search = () => {
     fetchSearch();
     // eslint-disable-next-line
   }, [type, page]);
-
   return (
-    <div>
+    <div className="searchResult">
       <div className="search">
         <ThemeProvider theme={darkTheme}>
           <TextField

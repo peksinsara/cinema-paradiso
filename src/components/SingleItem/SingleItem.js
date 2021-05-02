@@ -1,34 +1,27 @@
 import React from 'react';
 import './SingleItem.css';
-import {img_300, unavailable} from  './config.js';
+import { img_300, unavailable } from './config.js';
+import CustomModal from '../Modal/Modal';
 
-
-const SingleItem = ({
-    id,
-    poster,
-    description,
-    date,
-    name,
-    popularity,
-    vote_average,
-    media_type
-    
-}) => {
+const SingleItem = ({ id, poster, title, date, media_type, vote_average }) => {
     return (
-        <div className="single-item">
-            <div className="vote-average">
-                <h2>{vote_average}</h2>
-            </div>
-            <img src={poster ? `${img_300}/${poster}` : unavailable} alt="{name}" />
-            <h2 className="series-name">{name}</h2>
-            <span maxLength={11} className="description">{description}</span>
-            <h2 className="popularity">{popularity}</h2>
-            <h2 className="media_type">{media_type}</h2>
+      
+    <CustomModal className="single-item" media_type={media_type} id={id}>
+      <h2 className="vote-average">{vote_average}</h2>
+
+      <img
+        className="poster"
+        src={poster ? `${img_300}${poster}` : unavailable}
+        alt={title}
+      />
+      <b className="title">{title}</b>
+      <span className="subTitle">
+        {media_type === "tv" ? "TV Series" : "Movie"}
+        <span className="subTitle">{date}</span>
+      </span>
+            </CustomModal>
             
-
-        </div>
-    )
-}
-
+  );
+};
 
 export default SingleItem;

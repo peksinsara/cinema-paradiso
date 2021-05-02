@@ -1,12 +1,9 @@
-.pageTitle{
 
-    display:flex;
-    justify-content:center;
-    font-size:6vW;
-}
 .search{
     display:flex;
-    
     justify-content:center;
     align-content: center;
+}
+.searchResult{
+    
 }
