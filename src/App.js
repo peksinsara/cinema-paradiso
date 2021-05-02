@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Series from './pages/Series/Series.js';
 import Movies from './pages/Movies/Movies.js';
 import Search from './pages/SearchBar/SearchBar.js';
+import CustomFooter from './components/Footer/Footer.js';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/search" component={Search}/>
         </Switch>
       </div>
+      <CustomFooter />
     </Router>
   );
 }

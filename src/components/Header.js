@@ -18,10 +18,12 @@ const Header = () => {
   }, [click, history]);
 
   return (
+    // eslint-disable-next-line 
     <div className="header">
       <div className="logo-nav">
         <div className="logo-container">
-          <a href="https://www.google.ba">
+        
+          <a href="#">
             <Logo className="logo" />
           </a>
         </div>
