@@ -94,7 +94,7 @@ const Search = () => {
                 key={c.id}
                 id={c.id}
                 poster={c.poster_path}
-                description={c.overview}
+                overview={c.overview}
                 popularity={c.popularity}
                 name={c.name}
                 vote_average={c.vote_average}

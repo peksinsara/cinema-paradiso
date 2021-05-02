@@ -4,6 +4,7 @@
   object-fit: contain;
   border-radius: 10px;
 }
+
 .media{
   display:flex;
   flex-direction:column;
@@ -15,7 +16,11 @@
   font-family: "Montserrat", sans-serif;
   width: 350px;
   padding: 5px;
+
   margin: 20px 10px 20px 10px;
+}
+.button{
+  background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
 }
 
 .CustomModal_portrait {
@@ -62,7 +67,7 @@
   justify-content: center;
 }
 
-.CustomModal_description {
+.CustomModal_overview {
   display: flex;
   height: 40%;
   overflow-y: scroll;
@@ -73,7 +78,7 @@
   text-align: justify;
 }
 
-.CustomModal_description::-webkit-scrollbar {
+.CustomModal_overview::-webkit-scrollbar {
   display: none;
 }
 
@@ -98,7 +103,7 @@
   .CustomModal_title {
     font-size: 3.5vw;
   }
-  .CustomModal_description {
+  .CustomModal_overview {
     font-size: 22px;
   }
 }

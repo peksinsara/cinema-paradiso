@@ -9,7 +9,7 @@ import {
   unavailable,
   unavailableLandscape,
 } from '../SingleItem/config';
-import Button from '../Button/Button';
+import { Button } from "@material-ui/core";
 import './Modal.css';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 
@@ -79,8 +79,9 @@ export default function CustomModal({ children, id, media_type }) {
         {children}
       </div>
       <Modal
+    
         aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
+        aria-describedby="transition-modal-overviewn"
         className={classes.modal}
         open={open}
         onClose={handleClose}
@@ -127,11 +128,12 @@ export default function CustomModal({ children, id, media_type }) {
                   <i className="tagline">{content.tagline}</i>
                 )}
 
-                <span className="CustomModal_description">
+                <span className="CustomModal_overviewn">
                   {content.overview}
                 </span>
 
-                <Button
+                  <Button
+                    className="button"
                   variant="contained"
                   startIcon={<YouTubeIcon />}
                   color="secondary"
