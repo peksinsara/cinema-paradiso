@@ -52,7 +52,7 @@ export default function CustomModal({ children, id, media_type }) {
     );
 
     setContent(data);
-    console.log(data);
+    // console.log(data);
   };
 
   const fetchVideo = async () => {
@@ -61,7 +61,7 @@ export default function CustomModal({ children, id, media_type }) {
     );
 
     setVideo(data.results[0]?.key);
-    console.log(data);
+    //console.log(data);
   };
   useEffect(() => {
     fetchData();

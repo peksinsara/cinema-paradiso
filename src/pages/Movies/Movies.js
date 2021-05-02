@@ -14,7 +14,7 @@ const Movies = () => {
       `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&page=${page}`
     );
 
-    console.log(data);
+    //console.log(data);
     setContent(data.results);
   };
 
